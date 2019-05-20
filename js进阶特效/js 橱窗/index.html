@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+    *{
+    	padding: 0;
+    	margin: 0;
+    	list-style: none;
+    }
+    #box{
+    	position: relative;
+    	width: 820px;
+    	height: 380px;
+    	margin: 100px auto;
+    	overflow: hidden;
+    }
+    #box_top{
+    	position: absolute;
+        left: 0;
+        top:0;
+    	width: 500%;
+        height: 100%;
+    }
+    #box ul li{
+    	float: left;
+    }
+    #box_bottom{
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	width: 820px;
+    	height: 40px;
+    	background-color: #ccc;
+    }
+    #box_bottom #bar{
+    	position: absolute;
+    	height: 100%;
+    	cursor: pointer;
+    	border-radius: 8px;
+    	background-color: hotpink;
+    }
+	</style>
+</head>
+<body>
+	<div id="box">
+       <ul id="box_top">
+          	<li><img src="images/lol.jpg" alt=""></li>
+          	<li><img src="images/lol2.jpg" alt=""></li>
+          	<li><img src="images/lol3.jpg" alt=""></li>
+          	<li><img src="images/lol4.jpg" alt=""></li>
+          	<li><img src="images/lol5.jpg" alt=""></li>
+       </ul>
+       <div id="box_bottom">
+          <span id="bar"></span>
+       </div>
+	</div>
+
+	<script>
+
+    function $(id){
+    	return typeof id === 'string' ? document.getElementById(id):null;
+    	}
+
+    	window.onload = function(){
+    		var box = $('box');
+    		var ul =box.children[0]
+    		var bar = $('bar');
+    		// console.log(bar)  
+
+    		//滑动条宽度要根据内容自适应；
+    		var size = box.offsetWidth/ul.offsetWidth;		
+    		bar.style.width = size * box.offsetWidth + 'px';
+            // console.log(ul.style.left);
+    		// console.log(bar.style.left);
+
+
+    		bar.onmousedown = function(event){
+    		
+    			document.onmousemove = function(event){
+    				var event = event || window.event;
+    				X = event.clientX - box.offsetLeft;
+
+    				if(X < 0){
+                        X = 0;
+    				}else if(X > box.clientWidth - bar.clientWidth){
+    					X = box.clientWidth - bar.clientWidth;
+    				}
+    				bar.style.left = X + 'px';
+
+    				ul.style.left = -(X/size) + 'px';
+           
+
+
+    			}
+
+    			document.onmouseup = function(){
+    				document.onmousemove = null;
+    			}
+    		}
+    	
+    }
+  
+	</script>
+</body>
+</html>

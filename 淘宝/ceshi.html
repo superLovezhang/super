@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        float: left;
+        /*为什么看不见红色区域了？？*/
+        /*应为子元素浮动后，如果祖先元素没有设置宽高的话，子元素不再能撑开祖先元素高宽，因此我们一般给祖先宽高或者clearfix*/
+        list-style: none;
+    }
+       ul{
+        background-color: red;
+       }
+       li{
+        float: left;
+       }
+    </style>
+</head>
+<body>
+   <ul>
+       <li>sda</li>
+       <li>sda</li>
+       <li>asd </li>
+   </ul>
+</body>
+</html>

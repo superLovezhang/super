@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lol</title>
+	<style>
+     *{
+     	padding: 0;
+     	margin: 0;
+     }
+     ul{
+     	list-style: none;
+     }
+     div{
+     	overflow: hidden;
+     	width: 820px;
+     	height: 340px;
+     	margin: 200px auto;
+     }
+     ul li{
+     	float: left;
+     }
+     ul{
+     	width: 1200%;
+     	animation: moving ease-out 5s 2s  infinite;
+     }
+     @keyframes moving{
+     	0%{
+     		transform: translate3d(-820px,0,0);
+     	}
+     	25%{
+     		transform: translate3d(-1640px,0,0);
+     	}
+     	50%{
+     		transform: translate3d(-2460px,0,0);
+     	}
+     	75%{
+     		transform: translate3d(-3280px,0,0);
+     	}
+     	99%{
+     		transform: translate3d(-4100px,0,0);
+     	}
+     	100%{
+     		transform: translate3d(0,0,0);
+     	}
+     }
+     div:hover ul{
+     	animation-play-state: paused; 
+     }
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href=""><img src="images/lol.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol2.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol3.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol4.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol5.jpg" alt=""></a></li>
+               <li><a href=""><img src="images/lol.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol2.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol3.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol4.jpg" alt=""></a></li>
+			<li><a href=""><img src="images/lol5.jpg" alt=""></a></li>		
+	    </ul>
+	</div>
+</body>
+</html>

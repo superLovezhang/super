@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		list-style: none;
+	}
+    div{
+    	overflow: hidden;
+    	width: 1050px;
+    	height: 150px;
+    	border: 1px solid #000;
+    	margin: 200px auto;
+    }
+    ul  {
+    	width: 200%;
+    	animation: moving 5s linear infinite;
+    }
+    ul li{
+    	float: left;
+    }
+    @keyframes moving{
+    	from{
+    		transform: translate3d(-1050px,0,0);
+    	}
+    	to{
+    		transform: translate3d(0,0,0);
+    	}
+    }
+    div:hover ul{
+    	animation-play-state:paused;
+    }
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img src="images/01.jpg" width="150px" height="150px"></li>
+			<li><img src="images/02.jpg" width="150px" height="150px"></li>
+			<li><img src="images/03.jpg" width="150px" height="150px"></li>
+			<li><img src="images/04.jpg" width="150px" height="150px"></li>
+			<li><img src="images/05.jpg" width="150px" height="150px"></li>
+			<li><img src="images/06.jpg" width="150px" height="150px"></li>
+			<li><img src="images/07.jpg" width="150px" height="150px"></li>
+			<li><img src="images/01.jpg" width="150px" height="150px"></li>
+			<li><img src="images/02.jpg" width="150px" height="150px"></li>
+			<li><img src="images/03.jpg" width="150px" height="150px"></li>
+			<li><img src="images/04.jpg" width="150px" height="150px"></li>
+			<li><img src="images/05.jpg" width="150px" height="150px"></li>
+			<li><img src="images/06.jpg" width="150px" height="150px"></li>
+			<li><img src="images/07.jpg" width="150px" height="150px"></li>
+
+		</ul>
+	</div>
+</body>
+</html>

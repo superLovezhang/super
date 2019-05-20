@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/my.js"></script>
+	<style>
+
+    *{
+    	margin: 0;
+    	padding: 0;
+
+    }
+    p{
+    	text-align: center;
+    }
+    span{
+    	position: fixed;
+    	bottom: 20px;
+    	right: 10px;
+    	width: 43px;
+    	height: 43px;
+    	cursor: pointer;
+    	display: none;
+    	background: url(images/top.png) no-repeat;
+    	background-size: 100% 100%;
+    }
+    
+	</style>
+	<script>
+    window.onload = function () {
+    	var top = $('top');
+    	var scroll_top, timer = null, begin = 0, end = 0;
+    	window.onscroll = function () {
+    	  scroll_top = scrollTop();
+    	  scroll_top > 0 ? top.style.display = 'block' : top.style.display = 'none';
+    	}
+    	top.onclick = function () {
+
+
+    	  //什么情况要在设置计时器的前面关闭计时器？
+    	  //  ## 该计时器可能被多次触发并且重叠；
+    	  //什么情况要在设置计时器的后面关闭计时器？
+    	  //  ## 都需要 否则计时器一直在后台运行 耗费性能！
+
+          timer = setInterval(function(){
+              begin = begin + (end - begin) * 0.2;
+              window.scrollTo(0,begin);
+              console.log(begin)
+              if(begin === 0){
+              	clearInterval(timer);
+              }
+          },20)
+    	}
+    }
+	</script>
+</head>
+<body>
+	<span id="top"></span>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+	<p>ds</p>
+</body>
+</html>

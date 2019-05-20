@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正反面</title>
+	<style>
+     div{
+     	width: 300px;
+     	height: 300px;
+        position: relative;
+     	margin: 100px auto;
+     }
+     img{
+     	position: absolute;
+     	left: 0;
+     	top: 0;
+     	transition: all 1s;
+     }
+     img:first-child{
+     	z-index: 1;
+     	backface-visibility:hidden;
+     }
+
+     div:hover img{
+     	transform: rotateY(180deg);
+     }
+	</style>
+</head>
+<body>
+	<div>
+      <img src="images/zheng.jpg" width="300px" height="300px">
+      <img src="images/fu.jpg" width="300px" height="300px">
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+	<title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+	<meta name="description" content="京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。">
+	<meta name="keywords" content="网上购物,网上商城,家电,手机,电脑,服装,居家,母婴,美妆,个护,食品,生鲜,京东">
+	<link rel="shortcut icon" href="favicon.ico" type="images/x-icon">
+	<link rel="stylesheet" href="css/normal.css">
+@font-face {  
+     font-family: 'icomoon';
+     src: url('fonts/icomoon.eot?7kkyc2');
+     src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+     url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+     url('fonts/icomoon.woff?7kkyc2') format('woff'),
+     url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+     font-weight: normal;
+     font-style: normal;
+   }  
+html{color:#626262;background:#f0f3ef}
+ul{list-style: none;}
+span{font-family: "icomoon";}
+
+a{text-decoration: none;}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+table{border-collapse:collapse;border-spacing:0}
+
+fieldset,img{border:0}
+
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+
+ol,ul,dt{list-style:none}
+
+caption,th{text-align:left}
+
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+
+q:before,q:after{content:''}
+
+abbr,acronym{border:0;font-variant:normal}
+
+sup{vertical-align:text-top}
+
+sub{vertical-align:text-bottom}
+
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+
+input,textarea,select{*font-size:100%}
+
+legend{color:#000}
+
+#yui3-css-stamp.cssreset{display:none}
+
+.clearfix{*zoom:1}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.z{width: 1190px; margin: 0 auto;}

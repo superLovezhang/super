@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    html,body{
+    	width: 100%;
+    	height: 100%;
+    }
+    #box1{
+    	
+    	position: absolute;
+    	top: 0;
+    	z-index: 10;
+    	width: 100%;
+    	height: 100%;
+    	background-color:rgba(0,0,0,.4);
+    }
+    #box2{
+    	
+    	position: absolute;
+    	top:50%;
+    	left: 50%;
+    	width: 750px;
+    	height: 450px;
+    	z-index: 99;
+    	background-color: white;
+    	transform: translate(-50%, -50%);
+    }
+    #box2 h1{
+    	text-align: center;
+    }
+	</style>
+</head>
+<body>
+    <button id='register'>注册</button>
+	<button id="login">登陆</button>
+    <div id="box1" style="display: none;"></div>
+    <div id="box2" style="display: none;">
+       <h1>注册</h1>
+       <div>User:</div>
+       <div>Password:</div>
+    </div>
+	<script>
+
+    function $(id){
+       return typeof id === 'string'? document.getElementById(id): null;
+    }  
+    window.onload = function(){
+    	var btn1 =$('register');
+    	var btn2 =$('login');
+        var box1 =$('box2')
+        var box2 =$('box1')
+    	btn1.onclick = function(){         
+          box1.style.display = 'block'
+          box2.style.display = 'block'
+    	}
+
+    	btn2.onclick = function(){
+          box1.style.display = 'block'
+          box2.style.display = 'block'
+    	}
+        
+
+    }
+    </script>
+</body>
+</html>

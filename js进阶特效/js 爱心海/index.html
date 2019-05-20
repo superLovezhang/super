@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: black;
+        }
+
+        span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            animation: slide 1.2s alternate infinite;
+            /* alternate  代表从100%到0的过渡 */
+            background: url(images/love.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        span:hover {
+            transform: scale(3,3) rotate(180deg) !important;
+            transition: all 1s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <script>
+        window.onload = function () {
+
+            //       获取屏幕的宽高；
+
+
+            var screenW = window.screen.width;
+            var screenH = window.screen.height;
+
+           //获取屏幕的宽高  document.documentElement.offsetWidth   document.documentElement.offsetHight 不包括滚轮  包扩可视区域和外边距margin 和边框border
+           //               document.documentElement.clientWidth   document.documentElement.clientHight  不包括滚轮 而且是可视区域的
+           //               window.screen.width  window.screen.hight  注意width hight 小写  是整个屏幕的宽高  屏幕有多大就有多大
+ 
+            for (var i = 0; i < 150; i++) {
+
+                //   随机得到屏幕宽高内的任意数值
+
+                var x = Math.random() * screenW;
+                var y = Math.random() * screenH;
+
+                // 创造span 并放进body中去
+
+                var span = document.createElement('span');
+                document.body.appendChild(span);
+
+                // 给span设置样式left top
+
+                span.style.left = x + 'px';
+                span.style.top = y + 'px';
+
+                // 随机得到一个0-1.5之间的数值作为缩放倍数
+
+                var size = Math.random() * 1.5;
+                span.style.transform = 'scale(' + size + ',' + size + ')'
+
+                // 随机得到一个0-1之间的数值作为频率
+
+                var frequency = Math.random();
+                span.style.animationDelay = frequency + 's';
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

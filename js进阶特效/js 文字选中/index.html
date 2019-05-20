@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    *{
+    	margin: 0;
+    	padding: 0;
+
+    }
+    img{
+    	width: 26px;
+    	height: 26px;
+    	position: absolute;
+    	display: none;
+    	overflow: hidden;
+    }
+    p{
+    }
+	</style>
+	<script>
+	function $(id){
+		return typeof id === 'string' ? document.getElementById(id) : null;
+	}
+     window.onload = function(){
+       $('dian').onmouseup = function(event){
+          var event = event || window.event;
+          
+          // event.stopPropagation();
+          // console.log(window.getSelection().toString());
+          var select = window.getSelection().toString();
+          // $('select').innerText = select;
+          if(select !== ''){
+          	$('select').style.display = 'block';
+          	$('select').style.top = event.clientY + 'px';
+            $('select').style.left = event.clientX + 'px';
+          }
+          document.onmousedown = function(event){
+         	var event =event;
+         	var targe = event.srcElement.id;
+         	console.log(targe)
+         	if(targe !== 'select'){
+            $('select').style.display = 'none';
+        } else{
+          window.location.href = "http://v.t.sina.com.cn/share/share.php"
+        }
+    }
+       }
+       $('share').onclick = function(){
+        window.location.href = "http://v.t.sina.com.cn/share/share.php";
+       }
+         
+        
+     }
+       
+	</script>
+</head>
+<body>
+	<p id="dian">等哈四等奖阿斯利康大三了；快递费；联发科的拉克丝的了；A卡是道具卡漏打卡了；爽快地把快乐；点开抢物品；登录；‘阿萨老大看；卡百利；人卡了；可雷破瑞哦唉节日哦好吧联发科的拉克丝的了；A卡是道具卡漏打卡了；爽快地把快乐；点开抢物品；登录；‘阿萨老大看；卡百利；人卡了；可雷破瑞哦唉节日哦好吧</p>
+	<img id="select" src="images/share.gif" alt="">
+  <!-- <button id="share">分享</button> -->
+</body>
+</html>

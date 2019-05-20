@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<script src="animate.js"></script>
+	<script>
+    function $(id){
+      return typeof id === 'string' ? document.getElementById(id) : null;
+    }
+    window.onload = function (){
+    	var box = $('box');
+    	var ul = $('ul');
+      var lis = $('slide').children;
+      var left = $('left');
+      var right = $('right');
+      var timer = null;
+      var index = 0;
+      slide();
+
+
+
+     
+
+      //设置一个定时器 为了让五个圆点切换背景颜色
+      function slide(){
+        timer = setInterval(function(){
+        antoChange();
+        constant($('ul'),-820*index,100);
+         },2000)
+      }
+      
+      
+
+      //autoChange自动改颜色
+      function antoChange(){
+        index++;
+        if(index > 4){
+          index = 0;
+        }
+        for(var i=0; i<lis.length; i++){
+           lis[i].className = '';
+        }
+        lis[index].className = 'active';
+      }
+       
+      // 给五个li添加点击事件 来改变背景颜色
+      for(var i = 0; i < lis.length; i++){
+         lis[i].index = i;
+         lis[i].onclick = color;
+      }
+    
+
+
+
+
+//  给五个改变颜色
+      function color(){
+        for (var j = 0; j < lis.length; j++){
+           lis[j].className = '';
+          }
+          clearInterval(timer)
+          this.className = 'active';
+          index = this.index;
+          constant($('ul'),-820*index,100)
+          slide();
+
+      }
+
+
+
+   
+   //用来切换ul的偏离left
+      function turn(index){
+          ul.style.left = -820 * index + 'px';
+      }
+    
+}
+    
+	</script>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+    #box{
+    	overflow: hidden;
+    	width: 820px;
+    	height: 340px;
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	transform: translate(-50%,-50%);
+    }
+    #ul{
+      position: absolute;
+    	width: 500%;
+    }
+    #ul li{
+    	float: left;
+    }
+    #slide{
+      position: absolute;
+      right: 50px;
+      bottom: 40px;
+      }
+    #slide li{
+      cursor: pointer;
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    #slide .active{
+      background-color: orange;
+    }
+	</style>
+</head>
+<body>
+	<div id="box">
+       <ul id="ul">
+       	 <li><img src="images/lol.jpg" alt=""></li>
+       	 <li><img src="images/lol2.jpg" alt=""></li>
+       	 <li><img src="images/lol3.jpg" alt=""></li>
+       	 <li><img src="images/lol4.jpg" alt=""></li>
+       	 <li><img src="images/lol5.jpg" alt=""></li>
+       </ul>
+       <ul id="slide">
+         <li class="active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+       </ul>
+	</div>
+</body>
+</html>

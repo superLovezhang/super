@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li a:link,
+li a:visited {
+    text-decoration: none;
+    color: rgb(51, 59, 56);
+}
+
+#tab {
+    margin: 200px auto;
+    position: relative;
+    width: 400px;
+    height: 160px;
+    border: 1px solid rgb(121, 111, 111);
+}
+
+.nav,
+.nav li {
+    float: left;
+}
+
+.nav li {
+    width: 80px;
+    text-align: center;
+    line-height: 37px;
+    background-color: #ccc;
+    border-bottom: 1px solid gray;
+}
+
+#tab .active {
+    font-weight: 800;
+    color: black;
+    background-color: white;
+    border: 0px;
+}
+
+#container{
+    height: 100%;
+}
+#container ul,
+#container li{
+    float: left;
+}
+#container ul{
+    padding-top: 38px;
+}
+#container li{
+    width: 180px;
+    line-height: 25px;
+    margin-left: 10px;
+}

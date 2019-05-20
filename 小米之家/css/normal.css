@@ -1,0 +1,281 @@
+	/*<!-- top顶栏开始 -->*/
+
+.site{
+	width: 100%;
+	height: 117px;
+}
+.topper{
+    height: 40px;
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+.top-l{
+	float: left;
+}
+.top-l li{
+    float: left;
+}
+.topsize{
+	display: block;
+	margin-right: 6px;
+	line-height: 40px;
+	font-size: 12px;
+    color: #b0b0b0;
+}
+.topcolor:hover{
+	color: white;
+}
+.shopcar{
+	display: block;
+	float: right;
+	padding: 0px 18px;
+	background-color: #424242;
+	margin: 0;
+}
+.shopcar:hover{
+	color: #ff6700;
+	background-color: white;
+}
+.design{
+	margin-right: 24px;
+	float: right;
+}
+.design li{
+	float: left;
+}
+
+	/*<!-- top顶栏结束 -->*/
+
+
+  /*header开始*/
+
+.header{
+	height: 50px;
+}
+.header img{
+	float: left;
+	margin-right: 7px;
+	background-color: #ff6700;
+}
+.header ul,.header li{
+	float: left;
+}
+.headersize{
+	font-size: 16px;
+	color: #333333;
+	line-height: 50px;
+	padding: 0 10px;
+}
+.header ul a:hover{
+	color: #ff6700;
+}
+.search{
+	float: right;
+	height: 50px;
+	width: 300px;
+	margin-bottom: 2px;
+	position: relative;
+	border: 1px solid #e0e0e0;
+}
+.search input[type=text]{
+	float: left;
+	text-indent: 9px;
+	width: 245px;
+    height: 50px;
+    outline: none;
+    border: 0;
+}
+.search input[type=submit]{
+	width: 54px;
+	height: 50px;
+	float: right;
+	cursor: pointer;
+  border: 0px;
+  outline: none;
+  border-left: 1px solid #e0e0e0;
+  transition: all 0.3s;
+  background: url(../images/search.png) center no-repeat;
+
+}
+.search input[type=submit]:hover{
+  background-color: #ff6700;
+}
+.search .mi-l,.search .mi-r{
+	padding: 0 5px;
+	color: #757575;
+	font-size: 12px;
+	background-color: #eeeeee;
+    position: absolute;
+    top:18px;
+}
+.search .mi-l{
+    left: 125px;
+}
+.search .mi-r{
+    right: 64px;
+}
+.search .mi-l:hover{
+	background-color: #ff6700;
+	color: white;
+}
+.search .mi-r:hover{
+	background-color: #ff6700;
+	color: white;
+}
+.header li a:hover .more{
+  display: block;
+}
+
+  /*header结束*/
+.more{
+  /*display: none;*/
+  top: 139px;
+  z-index: 5;
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+  background-color: white;
+  border-top: 1px #e0e0e0 solid;
+}
+.more ul{
+  height: 100%;
+}
+.more ul li{
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 204px;
+  height: 100%;
+}
+
+.more img{
+  display: block;
+  width: 160px;
+  height: 110px;
+  margin: 38px 0 22px 23px;
+}
+.more .mi a{
+  display: block;
+  color: #333333;
+  font-size: 12px;
+  text-align: center;
+}
+.more p{
+  font-size: 12px;
+  color: #ff6700;
+  text-align: center;
+}
+.more .ico{
+  position: absolute;
+  top: 0px;
+  left: 69px;
+  line-height: 20px;
+  padding:0 20px;
+  color: #ff6700;
+  font-size: 12px;
+  border: 1px solid #ff6700;
+}
+.more li:before{
+  content: "";
+  width: 1px;
+  height: 100px;
+  right: 0px;
+  top: 35PX;
+  position: absolute;
+  background-color: #e0e0e0;
+}
+  /*home开始*/
+
+
+  .home{
+  	position: relative;
+  	margin: 22px auto;
+  }
+  .nav{
+  	overflow: hidden;
+  	position: absolute;
+  	left: 0;
+  	top:0;
+  	width: 235px;
+  	height: 460px;
+  	background-color: rgba(0,0,0,0.6);
+  }
+  .nav ul{
+  	padding-top: 20px;
+  }
+  .nav li{
+  	padding-left: 30px;
+  	position: relative;
+  }
+  .nav li:hover{
+  	background-color: #ff6700;
+  }
+  .nav a{
+  	display: block;
+  	color: white;
+  	font-size: 14px;
+  	line-height: 42px;
+  }
+  .nav i{
+  	position: absolute;
+  	color: #8ca0a5;
+  	font-weight: 700;
+  	font-size: 17px;
+  	top:15px;
+  	right: 10px;
+  }
+
+  /*home结束*/
+
+  /*手机卡开始*/
+
+  .tel{
+  	height: 170px;
+  }
+
+  .tel dl{
+    width: 100%;
+    height: 100%;
+  }
+
+  .tel dt,.tel dd{
+    float: left;
+  }
+  .tel dt{
+  	margin-right: 13px;
+  	width: 235px;
+  	height: 171px;
+  	background-color: #5f5750;
+  }
+  .tel  dt a i{
+  	font-size: 25px;
+  	display: block;
+  }
+  .tel dt a{
+  	float:left;
+  	width: 77px;
+  	height: 85px;
+  	color: #cfcdcb;
+  	font-size: 12px;
+  	padding-top: 18px;
+  	text-align: center;
+  	border: 1px solid #665e57;
+  	box-sizing: border-box;
+  }
+  .tel dt a:hover{
+  	color: white;
+  }
+  .special{
+  	font-size: 700px;
+  }
+
+  .tel dd{
+  	cursor:pointer ;
+  	width: 317px;
+  	height: 170px;
+  }
+  .tel dd:nth-child(3){
+  	margin: 0 13px;
+  }

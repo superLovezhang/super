@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小米商城 - 小米9、小米MIX 3、红米Note 7，小米电视官方网站</title>
+	<meta name="description" content="小米商城直营小米公司旗下所有产品，囊括小米手机系列小米9、小米MIX 3、小米Note 3，红米手机系列红米Note 7、红米6 Pro，智能硬件，配件及小米生活周边，同时提供小米客户服务及售后支持。">
+	<meta name="keyword" content="小米,小米9,小米Note3,红米Note7,小米MIX3,小米商城">
+	<meta name="viewport" content="width=1226">
+	<link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/normal.css">
+  <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+    
+ @font-face {  
+     font-family: 'icomoon';
+     src: url('fonts/icomoon.eot?7kkyc2');
+     src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+     url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+     url('fonts/icomoon.woff?7kkyc2') format('woff'),
+     url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+     font-weight: normal;
+     font-style: normal;
+   }  
+	</style>
+</head>
+<body>
+
+	<!-- top顶栏开始 -->
+
+
+	<div class="site" id="app">
+       <div class="topper">
+         <div class="container">
+          <ul class="top-l">
+          	<li class="top-l"><a href="" class="topsize topcolor">小米商城</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">MIUI</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">loT</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">云服务</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">金融</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">有品</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">小爱开放品台</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">政企服务</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">资质证照</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">协议规则</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">下载app</a></li>
+          	<li class="topsize">|</li>
+          	<li class="top-l"><a href="" class="topsize topcolor">SelectRegion</a></li>
+          	<li class="topsize">|</li>
+          </ul>
+          <a href="#" class="shopcar topsize"><i></i> 购物车（0)</a>
+          <ul class="design">
+          	<li><a href="" class="topsize topcolor">登录</a></li>
+          	<li class="topsize">|</li>
+          	<li><a href="" class="topsize topcolor">注册</a></li>
+          	<li class="topsize">|</li>
+          	<li class="topsize topcolor">消息通知</li>
+          </ul>
+         </div>
+       </div>
+
+
+	<!-- top顶栏结束 -->
+
+
+     <!-- header开始 -->
+
+       <div class="header container">
+          <img src="images/mi-logo.png" title="小米之家">
+          <img src="images/mi.gif">
+          <ul>
+          	<li><a href="" class="headersize" @mouseenter="flag=!flag">小米手机</a></li>
+          	<li><a href="" class="headersize">红米</a></li>
+          	<li><a href="" class="headersize">电视</a></li>
+          	<li><a href="" class="headersize">笔记本</a></li>
+          	<li><a href="" class="headersize">家电</a></li>
+          	<li><a href="" class="headersize">新品</a></li>
+          	<li><a href="" class="headersize">路由器</a></li>
+          	<li><a href="" class="headersize">智能硬件</a></li>
+          	<li><a href="" class="headersize">服务</a></li>
+          	<li><a href="" class="headersize">社区</a></li>
+          </ul>
+             <div class="search">            
+               <input type="text">
+               <input type="submit" value="">
+               <a href="" class="mi-l">小米9</a>
+               <a href="" class="mi-r">小米9 SE</a>
+             </div> 
+       </div>
+       <div class="more" v-show="flag">
+     <ul class="container clearfix" @mouseleave="flag=!flag">
+       <li>
+          <a href=""><img src="images/headert1.png"></a>
+          <div class="mi"><a href="">小米9</a></div>
+          <p>2999元</p>
+          <div class="ico">新品</div>
+        </li>
+        <li>
+          <a href=""><img src="images/headert2.png"></a>
+          <div class="mi"><a href="">小米9 王源限量版</a></div>
+          <p>3599元</p>
+          <div class="ico">新品</div>
+        </li>
+        <li>
+          <a href=""><img src="images/headert3.png"></a>
+          <div class="mi"><a href="">小米9 SE</a></div>
+          <p>1999元</p>
+          <div class="ico">新品</div>
+        </li>
+        <li>
+          <a href=""><img src="images/headert4.png"></a>
+          <div class="mi"><a href="">小米9 SE 布朗熊限量套装</a></div>
+          <p>2499</p>
+          <div class="ico">新品</div>
+        </li>
+        <li>
+          <a href=""><img src="images/headert5.png"></a>
+          <div class="mi"><a href="">小米MIX 3</a></div>
+          <p>3299元</p>
+        </li>
+        <li>
+          <a href=""><img src="images/headert6.png"></a>
+          <div class="mi"><a href="">小米8 青春版</a></div>
+          <p>1499元</p>
+        </li>
+     </ul>
+  </div>
+
+	</div>
+  
+  <script>
+     var vm = new Vue({
+       el:'#app',
+       data:{
+        flag:false
+       }
+
+     })
+  
+  </script>
+
+	<!-- header结束 -->
+  
+	<!-- home开始 -->
+
+
+	<div class="home container">
+       <img src="images/home.jpg" width="1226px">
+       <div class="nav">
+          <ul>
+          	<li>
+          	   <a href="">手机 电话卡</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">电视 盒子</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">笔记本 平板</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">家电 插线板</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">出行 穿戴</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">智能 路由器</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">电源 配件</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">健康 儿童</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">耳机 音箱</a>
+          	   <i></i>
+          	</li>
+          	<li>
+          	   <a href="">生活 箱包</a>
+          	   <i></i>
+          	</li>
+          </ul>
+       </div>
+	</div>
+
+	<!-- home结束 -->
+
+	<!-- 手机卡开始 -->
+
+
+	<div class="tel container">
+       <dl>
+       	<dt>
+           <a href=""><i></i>选购手机</a>
+           <a href=""><i></i>企业团购</a>
+           <a href=""><i></i>F码通道</a>
+           <a href=""><i></i>米粉卡</a>
+           <a href=""><i></i>以旧换新</a>
+           <a href=""><i></i>话费充值</a>
+       	</dt>
+       	<dd><img src="images/tel1.jpg" width="317px" height="170px"></dd>
+       	<dd><img src="images/tel2.jpg" width="317px" height="170px"></dd>
+       	<dd><img src="images/tel3.jpg" width="317px" height="170px"></dd>
+       </dl>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

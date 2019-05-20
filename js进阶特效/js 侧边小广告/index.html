@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+    div{
+    	width: 200px;
+    	height: 300px;
+    	background-color: red;
+    	position: absolute;
+    	top: 300px;
+    	left: 0;
+    }    
+    p{
+    	text-align: center;
+    }
+	</style>
+	<script>
+
+    window.onload = function (){
+    	var div = document.getElementsByTagName('div')[0];
+    	var top = div.offsetTop;
+    	var timer = null, begin = 0, end = 0;
+    	window.onscroll = function(){
+    		clearInterval(timer);
+            var scroll_top = document.documentElement.scrollTop;
+            end = top + scroll_top;
+            timer = setInterval(function(){
+            	begin = begin + (end - begin) * 0.2;
+            	div.style.top = begin + 'px';
+            },20)
+    	}
+    }
+
+	</script>
+</head>
+<body>
+	
+     <div></div>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+     <p>1</p>
+</body>
+</html>

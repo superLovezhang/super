@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    *{
+    	padding: 0;
+    	margin: 0;
+    	list-style: none;
+    	
+    }
+    body{
+    	background-color: pink;
+    }
+    #box{
+    	position: relative;
+    	width: 1340px;
+    	height: 40px;
+    	margin: 100px auto;
+    	background-color: white;
+    }
+    #box ul{
+    	position: relative;
+    }
+    #box ul li{
+    	float: left;
+    	line-height: 40px;
+    	text-align: center;
+    	width: 134px;
+    }
+    span{
+    	position: absolute;
+    	width: 134px;
+    	height: 40px;
+    	background-color: green;
+    }
+	</style>
+</head>
+<body>
+	<div id="box">
+	    <span></span>
+		<ul>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+			<li>我是警察</li>
+		</ul>
+	</div>
+	<script>
+         
+         function $(id){
+         	return typeof id === 'string'? document.getElementById(id):null;
+         }
+         window.onload = function(){
+         	var span = $('box').children[0];
+         	var ul = $('box').children[1];
+         	var lis = ul.children;
+         	var beginX = 0;
+         	for(var i=0; i<lis.length; i++){
+         		lis[i].index = i;
+                lis[i].onmouseover = function(){
+                   end = this.offsetLeft;
+                };
+
+                lis[i].onmousedown = function(){
+                	beginX = this.offsetLeft;
+                }
+
+                lis[i].onmouseout = function(){
+                	end = beginX;
+                }
+         	}
+
+
+            var begin =0;
+            var end = 0;
+            setInterval(function(){
+            	begin = begin + (end - begin)*0.1
+            	span.style.left = begin + 'px';
+            },10)
+         }
+
+	</script>
+</body>
+</html>

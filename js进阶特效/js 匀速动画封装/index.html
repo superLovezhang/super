@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    #box{
+    	width: 100px;
+    	height: 100px;
+    	margin-top: 200px;
+    	position: absolute;
+    	background-color: hotpink;
+    }
+    .angle{
+    	width: 1px;
+    	height: 1200px;
+    	position: absolute;
+    	left: 1000px;
+    	border-left: 1px solid black;
+    }
+	</style>
+</head>
+<body>
+	<button id="btn1">动次打次</button>
+	<button id="btn2">动次打次</button>
+	<div id="box"></div>
+    <div class="angle"></div>
+    <script src="./animate.js"></script>
+	<script>
+       window.onload = function(){
+       	  $('btn1').onclick = function(){
+       	  	constant($('box'),1000,20);
+       	  }
+       	   $('btn2').onclick = function(){
+       	  	constant($('box'),-1000,20);
+       	  }
+       
+     }
+	</script>
+</body>
+</html>

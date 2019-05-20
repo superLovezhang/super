@@ -1,0 +1,49 @@
+body{
+	background-color: black;
+}
+.middle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+}
+.bar{
+	width: 6px;
+	height: 40px;
+	display: inline-block;
+	transform-origin: bottom center;
+	background-color: white;
+	animation: loading 1.5s infinite;
+}
+.bar1{
+	animation-delay: 0.1s;
+}
+.bar2{
+	animation-delay: 0.2s;
+}
+.bar3{
+	animation-delay: 0.3s;
+}
+.bar4{
+	animation-delay: 0.4s;
+}
+.bar5{
+	animation-delay: 0.5s;
+}
+.bar6{
+	animation-delay: 0.6s;
+}
+@keyframes loading{
+	0%{
+		transform: scaleY(0.1);
+		background: green;
+	}
+	50%{
+		transform: scaleY(1);
+		background: yellow;
+	}
+	100%{
+		transform: scaleY(0.1);
+		background: transparent;
+	}
+}

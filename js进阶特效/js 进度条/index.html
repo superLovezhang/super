@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+   
+    #process{
+    	position: relative;
+    	width: 1000px;
+        height: 40px;
+        margin: 100px auto;
+    }
+    #container{
+        width: 900px;
+        height: 100%;
+        border-radius: 0 10px 10px 0;        
+        background-color: #ccc;
+    }
+    #process_bar{
+    	width: 0;
+    	height: 100%;
+    	position: relative;
+    	border-radius: 10px 0 0 10px;
+    	background-color: orange;
+    }
+    #process_fre{
+    	width: 40px;
+    	height: 80px;
+    	position: absolute;
+    	left: 0;
+    	top: -20px;
+    	cursor: pointer;
+    	border-radius: 10px;
+    	background-color: inherit;
+    }
+    #process_value{
+    	position: absolute;
+    	top: 13px;
+    	right: 40px;
+    }
+	</style>
+</head>
+<body>
+	<div id="process">
+       <div id="container">
+          <div id="process_bar">
+             <span id="process_fre"></span>
+           </div>
+           <div id="process_value">0%</div>
+        </div>
+	</div>
+
+	<script>
+
+    function $(id){
+    	return typeof id==='string'? document.getElementById(id):null;
+    }
+
+    window.onload = function(){
+    	var process = $('process');
+        var container = process.children[0]
+    	var process_bar = container.children[0];
+    	var process_fre = process_bar.children[0];
+    	var process_value = container.children[1];
+
+    	// console.log(process,process_bar,process_fre,process_value)
+
+    	process_fre.onmousedown = function(event){
+
+    		document.onmousemove = function(event){
+    		var event = event || window.event;
+    		X = event.clientX - process.offsetLeft;
+    		if(X < 0){
+               X = 0;
+    		}
+            else if(X > (container.clientWidth - process_fre.clientWidth)){
+               X = container.clientWidth - process_fre.clientWidth;
+    		}
+
+    		process_fre.style.left = X + 'px';
+            process_bar.style.width = X + 'px';
+
+            var value = parseInt(process_bar.clientWidth/(container.clientWidth - process_fre.clientWidth) *100);
+            console.log(value)
+            process_value.innerHTML = value + '%';
+
+    	};
+
+    	    document.onmouseup = function(){
+    	    	document.onmousemove = null;
+    	    }
+    	}
+    	
+    }
+
+	</script>
+</body>
+</html>

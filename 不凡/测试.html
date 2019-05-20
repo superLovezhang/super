@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>开门大吉</title>
+ <style>
+   section{
+    perspective: 900px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 100px auto;
+    background: url(images/xiao.gif) no-repeat;
+    background-size: cover;
+
+
+   }
+   .left,.right{
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    background-color: #7e1818;
+    transition: all 2s; 
+    border: 1px solid #000;   
+   }
+   .left{
+    left: 0;
+    top: 0;
+    transform-origin: left;
+
+   }
+   .right{
+    right: 0;
+    top: 0;
+    transform-origin: right;
+   }
+   .bt-l,.bt-r{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+   .left .bt-l{
+    right:18px;
+   }
+   .right .bt-r{
+    left:18px;
+   }
+    section:hover .right{
+    transform: rotateY(180deg);
+   }
+   section:hover .left{
+    transform: rotateY(-180deg);
+   }
+ </style>
+</head>
+<body>
+  <section>
+    <div class="left">
+      <p class="bt-l"></p>
+    </div>
+    <div class="right">
+      <p class="bt-r"></p>
+    </div>
+  </section>
+</body>
+</html>

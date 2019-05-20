@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>吸顶</title>
+	<style>
+       *{
+       	margin: 0;
+       	padding: 0;
+       }
+       img{
+       	width: 100%;
+       	vertical-align: top;
+       	border: 0;
+       }
+       .navs{
+       	position:fixed;
+       	left: 0;
+       	top: 0;
+       }
+       .body img{
+       	width: 70%;
+       	display: block;
+       	margin: 0 auto;
+       }
+	   .xiding{
+		   position: fixed;
+		   top: 0;
+	   }
+	</style>
+
+
+	<script>
+    window.onload = function(){
+    	var nav = document.getElementsByClassName('nav')[0];
+    	var navTop = nav.offsetTop;
+        
+
+        window.onscroll = function(){
+        	var scrollTop = document.documentElement.scrollTop;
+        	if(scrollTop >= navTop){
+        		nav.className = 'navs';
+        	}else {
+        		nav.className = '';
+        	}
+        }
+    }
+	</script>
+
+</head>
+<body>
+	<div class="header">
+       <img src="images/top.png" alt="">
+	</div>
+	<div class="nav">
+       <img src="images/nav.png" alt="">
+	</div>
+	<div class="body">
+       <img src="images/body01.png" alt="">
+       <img src="images/body02.png" alt="">
+	</div>
+</body>
+</html>

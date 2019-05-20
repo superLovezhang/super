@@ -1,0 +1,482 @@
+
+ @font-face {  
+     font-family: 'icomoon';
+     src: url('fonts/icomoon.eot?7kkyc2');
+     src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+     url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+     url('fonts/icomoon.woff?7kkyc2') format('woff'),
+     url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+     font-weight: normal;
+     font-style: normal;
+   }  
+   *{
+     	margin: 0;
+     	padding: 0;
+     }
+     ul{
+     	list-style: none;
+     }
+     a{
+     	text-decoration: none;
+     }
+     .clearfix:after{
+        display: block;
+        content: ".";
+        height: 0;
+        clear: both;
+        visibility: hidden;
+     }
+     .clearfix{
+     	*zoom:1;
+     }
+     img{
+         vertical-align:top;
+         border:0;
+     }	
+     .container{
+         width: 1360px;
+         margin: 0 auto;
+     }
+     i{
+     	 font-style: normal;
+     	 font-family: "icomoon";
+     }
+     body{
+     background-color: #eeeeee;
+}
+     /*页面初始化完成*/
+
+
+     /*官网头部开始*/
+
+     .header{
+     	position: relative;
+     	width: 100%;
+     	height: 720px;
+     	margin-bottom: 40px;
+     	background: url(images/header.jpg) no-repeat;
+     }
+     .nav{
+     	display: flex;
+     	justify-content: center;
+     	margin: 0 auto;
+     	background-color:rgba(0,0,0,.4);
+     }
+     .nav-l{
+     	float: left;
+     	width: 132px;
+     	height: 49px;
+     	padding-top: 14px;
+     }
+     .nav-c ul{
+     	float: left;
+     	padding-top: 20px;
+     	padding-left: 65px;
+     }
+     .nav-c li{
+     	float: left;
+     	text-align: center;
+     	padding-right: 72px;
+     }
+     .nav-c a{
+     	color: white;
+     	font-size: 19px;
+     }
+     .nav-c p{
+     	color:#aeaeae;
+        font-size: 11px;
+     }
+     .nav-r{
+     	float: right;
+     	width: 350px;
+     	padding-top: 26px;
+     	box-sizing: border-box;
+     }
+     .nav-r .search,.nav-r .tel,.user{
+     	float: left;
+     	font-size: 16px;
+     }
+     .nav-r a i{
+     	color:#cdbe91; 
+     	font-size: 30px;
+     }
+     .search,.tel{
+     	padding-right: 30px;
+     }
+     .nav-r .user i{
+     	color:#dab56a;
+     }
+     .nav-r .user span{
+     	display: inline-block;
+     	margin-top: -25px;
+     	color:#fefefe;
+     }
+     .check{
+     	font-size: 14px;
+     	display: block;
+     	position: absolute;
+     	bottom: 92px;
+     	left: 855px;
+     	width: 160px;
+     	line-height: 40px;
+     	color: #b98f2b;
+     	text-align: center;
+     	background-color: #060604;
+     	border: 1px solid #b98f2b;
+     }
+     .check:hover{
+          color: white;
+          background-color:#b98f2b;
+     }
+     .detail{
+     	position: absolute;
+     	right: 250px;
+     	bottom: 30px;
+     	color:#888787;
+     	line-height: 23px;
+     	font-size: 13px;
+     }
+     .detail span{
+     	color: #f5d185;
+     }
+     .detail a{
+     	color: #f5d185;
+     	text-align: center;
+     	width: 78px;
+     	height: 23px;
+     	display: inline-block;
+     	border: 2px solid #6d5225;
+     }
+     .detail a:hover{
+          background-color: #b98f2b;
+          color: white;
+     }
+     /*头部制作完成*/
+
+
+     /*轮播图部分开始*/
+
+ 
+     /*左边*/
+
+
+.slidebar-l{
+	float: left;
+	height: 380px;
+}
+.slidedown{
+	text-align: center;
+	color:#424242;
+	width: 820px;
+	height: 35px;    /*165*/
+	line-height: 38px;
+}
+.slidedown ul li{
+	float: left;
+	width: 164px;
+	box-sizing: border-box;
+	background-color: #e3e2e2;
+}
+.slidedown li:hover{
+	color: #ab8e66;
+	background-color:#f7f6f6;
+	border-bottom: 2px solid #cea861;
+
+}
+
+   /*右边*/
+
+
+.slidebar-r{
+     float: right;
+     width: 500px;
+     height: 380px;
+}
+.slidebar-r .notice{
+     width: 500px;
+     height: 35px;
+     color:#676767;
+     font-size: 19px; 
+     border-bottom: 1px solid #e0e2e2;
+}
+.notice ul,.notice ul li{
+     float: left;
+     cursor: pointer;
+}
+.notice li{
+     line-height: 34px;
+     box-sizing: border-box;
+     margin-right: 75px;
+}
+.notice li:last-child{
+     margin: 0;
+}
+.notice li:hover{
+     color: #1da6ba;
+     border-bottom: 2px solid #1da6ba;
+} 
+.bagge dt,.bagge dd{
+     width: 500px;
+     cursor: pointer;
+     border-bottom: 1px solid #e0e2e2;  
+}
+.bagge dt{
+     font-weight: 700;
+     line-height: 60px;
+     color: #1da6ba;
+     font-size:21px;
+     text-align: center;
+}
+.bagge dt:hover{
+     color: #bb9a6c;
+}
+.bagge dl dd{
+     overflow: hidden;
+     position: relative;
+     width: 500px;
+     color: #424242;
+     font-size: 14px;
+     line-height: 40px;
+}
+.bagge dd span{
+     display: inline-block;
+     width: 35px;
+     height: 20px;
+     margin: 10px 20px 0 0;
+     line-height: 20px;
+     text-align: center;
+     color: #bb9a6c;
+     border: 1px solid #bb9a6c;
+}
+.bagge dd:last-child{
+     border: 0;
+}
+.bagge dd i{
+     position: absolute;
+     right: 0;
+     color: #9d9d9d;
+}
+.bagge dd:hover{
+     color:#bb9a6c; 
+}
+.slidebar-r .more a{
+     display: block;
+     font-size: 14px;
+     line-height: 40px;
+     text-align: center;
+     color:#676767;
+     background-color:#e3e2e2; 
+}
+.slidebar-r a:hover{
+     background-color:#dad8d8; 
+}
+.slidebar-r a span{
+     color:#7ea1a6; 
+}
+
+/*轮播结束*/
+
+
+.action{
+     margin-top: 50px;
+}
+.action-l{
+     float: left;
+     width: 820px;
+     height: 335px;
+}
+.hot{
+     height: 35px;
+
+}
+.hot span,.hot ul,.hot li{
+     float: left;
+}
+.hot span{
+     line-height: 34px;
+     font-weight: 700px;
+     color: #0b0b0b;
+     font-size: 25px;
+     margin-right: 25px;
+}
+.hot ul{
+     width: 695px;
+     border-bottom: 1px solid #e0e2e2;
+}
+.hot ul li{
+     line-height: 34px;
+     font-size: 16px;
+     color: #676767;
+     margin-right: 40px;
+}
+.hot ul li:hover{
+     color: #1da6ba;
+     border-bottom: 2px solid #1da6ba;
+}
+.hot a{
+     line-height: 34px;
+     float: right;
+     font-size: 12px;
+     color:#7ea1a6; 
+}
+.hot a:hover{
+     color: #1da6ba;
+}
+.team{
+     width: 820px;
+     height: 280px;
+     margin-top: 20px;
+}
+.dream{
+     transition: all 0.2s;
+     float: left;
+     margin-right:13px;
+     width: 195px;
+     height: 280px;
+     background-color: white;
+}
+.dream:last-child{
+     float: right;
+     margin:0;
+}
+.dream p{
+     font-size: 14px;
+     padding-left: 10px;
+     margin-bottom: 20px;
+     color: #424242;
+}
+.dream:hover p{
+     color: #0da0b4;
+}
+.dream section{
+     position: relative;
+     line-height: 32px;
+     padding: 0px 10px 0px 10px;
+
+}
+.dream section span{
+     font-size: 12px;
+     color:#1da6ba;
+}
+.dream section i{
+     position: absolute;
+     right: 10px;
+     color:#cca45a;
+}
+.dream:hover{
+     margin-top: -5px;
+}
+.action-r{
+     float: right;
+     width: 496px;
+     height: 336px;
+}
+.action-r .download{
+     width: 496px;
+     height: 168px;
+}
+.action-r .download-l{
+     float:left;
+     width: 366px;
+     height: 168px;
+}
+.download-r{
+     overflow: hidden;
+     float:right;
+     width: 118px;
+     height: 76px;
+     font-size: 14px;
+     color: white;
+     line-height: 76px;
+     text-align: center;
+     background: url(images/sprite.png) -193px -316px;
+}
+.lingqu{
+     margin-top: 17px;
+}
+.action-r ul{
+     /*overflow: hidden;*/
+     width: 496px;
+     height: 168px;
+}
+.action-r li{
+     float: left;
+     cursor: pointer;
+     width: 112px;
+     height: 68px;
+     color: #424242;
+     font-size: 13px;
+     margin: 16px 16px 0 0;
+     text-align: center;
+     line-height: 68px;
+     background-color: white;
+}
+.action-r ul .chang{
+     width: 240px;
+}
+.action-r ul .special{
+     margin-right: 0;
+}
+.action-r li i{
+     margin-top: 4px;
+     color: #7b9fa4;
+     font-size: 20px;
+}
+.action-r li:hover{
+     color: #0da0b4;
+}
+
+
+/*中部完成*/
+
+
+/*底部开始*/
+
+.footer{
+     margin-top: 20px;
+     width: 100%;
+     background-color: #e3e2e2;
+}
+.footer-c{
+     height: 350px;
+     }
+.footer-l{
+     float: left;
+     overflow: hidden;
+     width: 590px;
+     height: 100%;
+}
+.footer .tencent{
+     width: 310px;
+     height: 60px;
+     margin: 105px 0 0 30px; 
+}
+.contact{
+     display: inline-block;
+     width: 190px;
+     height: 35px;
+     background: url(images/downsprite.png) -214px 0 no-repeat;
+}
+.riot{
+     display: inline-block;
+     width: 83px;
+     height: 53px;
+     background: url(images/downsprite.png) -216px -86px no-repeat;
+
+}
+.footer-r{
+     float: right;
+     width: 770px;
+     height: 100%;
+}
+.footer-r ul{
+     margin-top: 50px;
+}
+.footerfont{
+     line-height: 25px;
+     font-size: 12px;
+     color: #9f9378;
+}
+.footer-r a:hover{
+     text-decoration: underline;
+}

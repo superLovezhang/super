@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>car</title>
+	<style>
+     img{
+     	animation: car 5s;
+     }
+    @keyframes car{
+    	0%{
+    		transform: translate3d(0,0,0);
+    	}
+    	50%{
+    		transform: translate3d(600px,0,0);
+    	}
+    	51%{
+    		transform: translate3d(600px,0,0) rotateY(180deg) ;
+    	}
+        100%{
+        	transform: translate3d(0,0,0) rotateY(180deg)
+        }
+    }
+	</style>
+</head>
+<body>
+	<div><img src="images/car.jpg" width="100px" alt=""></div>
+</body>
+</html>

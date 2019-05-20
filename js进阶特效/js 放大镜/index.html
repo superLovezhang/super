@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+   
+    *{
+    	margin: 0;
+    	padding: 0;
+    	list-style: none;
+    }
+    #box{
+    	margin: 20px 0 0 50px;
+    	width: 430px;
+    	height: 430px;
+    	position: relative;
+    	border: 1px solid #ccc;
+    }
+    #slide{
+    	display: none;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	cursor:move;
+    	width: 100px;
+    	height: 100px;
+    	background-color: rgba(234,228,228,.4);
+    }
+    #small{
+    	width: 430px;
+    	height: 430px;
+    }
+    #small img{
+    	width: 430px;
+    	height: 430px;
+    }
+    #big img{
+    	width: 800px;
+    	height: 800px;
+    }
+    #big{
+    	overflow: hidden;
+    	position: absolute;
+    	left:480px; 
+    	top:0;
+    	width: 800px;
+    	height: 800px;
+    	display: none;
+    }
+    #tab{
+        overflow: hidden;
+    	height: 70px;
+
+    	margin: 20px  0 0 50px;
+    }
+    #tab li {
+        width: 66px;
+        height: 66px;
+    	float: left;
+    	margin: 5px;
+
+        text-align: center;
+    }
+    .active{
+        box-sizing: border-box;
+        border: 3px solid black;
+    }
+	</style>
+</head>
+<body>
+	<div id="box">
+       <div id="small">
+          <img src="images/01.jpg" id="small_img">
+          <span id="slide"></span>
+       </div>
+       <div id="big">
+          <img src="images/1.jpg" id="big_img" style="position: absolute;">
+       </div>
+	</div>
+	<ul id="tab">
+		<li><img src="images/001.jpg"></li>
+		<li><img src="images/002.jpg"></li>
+		<li><img src="images/003.jpg"></li>
+	</ul>
+
+	<script>
+
+    function $(id){
+    	return typeof id === 'string'? document.getElementById(id):null;
+    }
+    window.onload = function(){
+    	var box = $('box');
+    	var small = box.children[0];
+    	var small_img = small.children[0];
+    	var slide = small.children[1];
+    	var big = box.children[1];
+    	var big_img = big.children[0];
+        var tab = $('tab');
+        var lis = tab.children;
+
+        small.onmouseover = function(){
+        	slide.style.display = 'block';
+        	big.style.display = 'block';
+        };
+
+        small.onmouseout = function(){
+            slide.style.display = 'none';
+        	big.style.display = 'none';
+        }
+
+        small.onmousemove = function(e){
+        	var slideX = e.clientX - box.offsetLeft - slide.offsetWidth *0.5;
+        	var slideY = e.clientY - box.offsetTop - slide.offsetHeight *0.5;
+        	if(slideX < 0){
+               slideX = 0;
+        	} else if(slideX > (430 - slide.offsetWidth)){
+               slideX = 430 - slide.offsetWidth;
+        	}
+        	if(slideY < 0){
+               slideY = 0;
+        	} else if(slideY > (430 - slide.offsetHeight)){
+               slideY = 430 - slide.offsetHeight;
+        	}
+        	slide.style.left = slideX + 'px';
+        	slide.style.top = slideY + 'px';
+
+        	bigX = (small.offsetWidth/big.offsetWidth) * -(e.clientX - box.offsetLeft);
+        	bigY = (small.offsetHeight/big.offsetHeight) * -(e.clientY - box.offsetTop);
+        	big_img.style.left = bigX + 'px';
+        	big_img.style.top = bigY + 'px';
+        }
+
+        //这是在循环里并且在事件外给每一个数组的索引赋值；避免在事件里i全部为最终的3；
+
+        // var index;
+        // for(var i=0; i<lis.length; i++){
+        // 	lis[i].index = i;
+        //     lis[i].onmouseover = function(){
+        //     	small_img.src = "images/0"+(this.index+1)+".jpg";
+        //     	big_img.src = "images/"+(this.index+1)+".jpg";
+        //     }
+        // }
+           
+
+           for(var i=0; i<lis.length; i++){
+                (function(i){
+                   lis[i].onmouseover = function(){
+                   		small_img.src = "images/0"+(i+1)+".jpg";
+                     	big_img.src = "images/"+(i+1)+".jpg";
+                        for(var j=0; j<lis.length; j++){
+                           lis[j].className = '';
+                        }
+                        this.className = 'active';
+                   }
+                })(i)
+           }
+
+    }
+	</script>
+</body>
+</html>

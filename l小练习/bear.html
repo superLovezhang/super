@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bear</title>
+	<style>
+	body{
+		background:url(images/bg.png);
+	}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+    .bear{
+    	width: 200px;
+    	height: 100px;
+    	position: absolute;
+    	bottom: 0px;
+    	background: url(images/bear.png) repeat-x;
+    	animation: bearComing 7s both, bearRun 1s infinite steps(8);
+    }
+    .mountain1{
+    	width: 100%;
+    	height: 336px;
+    	position: absolute;
+    	bottom: 0px;
+    	background: url(images/mountain1.png) repeat-x;
+    	animation: mountainMove 100s infinite;
+    }
+    .mountain2{
+    	 width: 100%;
+    	height: 384px;
+    	position: absolute;
+    	bottom: 0px;
+    	animation: mountainMove 150s infinite;
+    	background: url(images/mountain2.png) repeat-x;
+    }    
+    .mountain3{
+    	width: 100%;
+    	height: 569px;
+    	position: absolute;
+    	bottom: 0px;
+    	animation: mountainMove 200s infinite;
+    	background: url(images/mountain3.png) repeat-x;
+    }   
+
+    .auroras{
+    	position: absolute;
+    	left: 50%;
+    	top: 0;
+    	z-index: 2;
+    	transform: translate(-50%,0);
+    	width: 640px;
+    	height: 352px;
+    }
+    .aurora{
+    	width: 100%;
+    	height: 100%;
+    	position: absolute;
+    	left: 0;
+    }
+    .aurora1{
+    	background: url(images/aurora1.png) no-repeat;
+    }
+    .aurora1{
+    	background: url(images/aurora2.png) no-repeat;
+    }
+    .aurora1{
+    	background: url(images/aurora3.png) no-repeat;
+    }  
+    .aurora1{
+    	background: url(images/aurora4.png) no-repeat;
+    }
+    .aurora1{
+    	background: url(images/aurora5.png) no-repeat;
+    }          
+     @keyframes bearComing{
+    	from{
+            transform: translate(0);
+    	}
+    	to{
+            transform: translate(800px);
+    	}
+    }
+    @keyframes bearRun{
+    	0%{
+             background-position: 0 0;
+    	}
+    	100%{
+             background-position: -1600px 0;
+    	}
+    }
+    @keyframes mountainMove{
+    	0%{
+             background-position: 0 0;
+    	}
+    	100%{
+             background-position: -3840px 0;
+    	}
+    }
+	</style>
+</head>
+<body>
+    <div class="auroras">
+       <div class="aurora aurora1"></div>
+       <div class="aurora aurora2"></div>
+       <div class="aurora aurora3"></div>
+       <div class="aurora aurora4"></div>
+       <div class="aurora aurora5"></div>
+    </div>
+    <div class="mountain3"></div>
+    <div class="mountain2"></div>
+    <div class="mountain1"></div>
+	   <div class="bear">
+	   </div>
+	
+</body>
+</html>

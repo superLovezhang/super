@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    div{
+    	width: 200px;
+    	height: 200px;
+    	background-color: gray;
+    	animation: pao 5s infinite;
+    }
+	@keyframes pao{
+	0%{
+	  transform:translate3d(0,0,0);
+	}
+	25%{
+	  transform:translate3d(500px,0,0);
+	}
+	50%{
+	  transform:translate3d(500px,600px,0);
+	}
+	75%{
+	  transform:translate3d(0,600px,0);
+	}
+	100%{
+	  transform:translate3d(0,0,0);
+	}
+	  }	</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
